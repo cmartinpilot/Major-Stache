@@ -8,22 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F80352017BDDB00299BFC /* AppDelegate.swift */; };
-		300F80382017BDDB00299BFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F80372017BDDB00299BFC /* ViewController.swift */; };
 		300F803B2017BDDB00299BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80392017BDDB00299BFC /* Main.storyboard */; };
 		300F803E2017BDDC00299BFC /* Stash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */; };
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
+		30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702401201A73AE008A0B5F /* CoreDataStack.swift */; };
+		30702411201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */; };
+		30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */; };
+		30702418201AC924008A0B5F /* AircraftTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702417201AC924008A0B5F /* AircraftTableVC.swift */; };
+		3070241F201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702419201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift */; };
+		30702420201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070241A201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift */; };
+		30702421201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070241B201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift */; };
+		30702422201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070241C201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift */; };
+		30702423201BAB4F008A0B5F /* Aircraft+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070241D201BAB4F008A0B5F /* Aircraft+CoreDataClass.swift */; };
+		30702424201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070241E201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift */; };
+		3070242C201BAEA4008A0B5F /* CoreDataModelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */; };
+		30CDBF0A202542F20074C7CF /* CabinetItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDBF09202542F20074C7CF /* CabinetItemVC.swift */; };
+		30CDBF0C202543250074C7CF /* CabinetItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CDBF0B202543250074C7CF /* CabinetItemCell.swift */; };
+		30E549D1201C148A008534A2 /* AircraftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E549D0201C148A008534A2 /* AircraftCell.swift */; };
+		30E549D6201C188B008534A2 /* CabinetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E549D5201C188B008534A2 /* CabinetVC.swift */; };
+		30E549D8201C1BDB008534A2 /* CabinetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E549D7201C1BDB008534A2 /* CabinetCell.swift */; };
+		30E549DA2020FC20008534A2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E549D92020FC20008534A2 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		300F80322017BDDB00299BFC /* Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300F80352017BDDB00299BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		300F80372017BDDB00299BFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		300F803A2017BDDB00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		300F803D2017BDDC00299BFC /* Stash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stash.xcdatamodel; sourceTree = "<group>"; };
 		300F803F2017BDDC00299BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300F80422017BDDC00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300F80442017BDDC00299BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30702401201A73AE008A0B5F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30702417201AC924008A0B5F /* AircraftTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftTableVC.swift; sourceTree = "<group>"; };
+		30702419201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CabinetItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3070241A201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CabinetItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3070241B201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cabinet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3070241C201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cabinet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3070241D201BAB4F008A0B5F /* Aircraft+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aircraft+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3070241E201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aircraft+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelEnum.swift; sourceTree = "<group>"; };
+		30CDBF09202542F20074C7CF /* CabinetItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetItemVC.swift; sourceTree = "<group>"; };
+		30CDBF0B202543250074C7CF /* CabinetItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetItemCell.swift; sourceTree = "<group>"; };
+		30E549D0201C148A008534A2 /* AircraftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftCell.swift; sourceTree = "<group>"; };
+		30E549D5201C188B008534A2 /* CabinetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetVC.swift; sourceTree = "<group>"; };
+		30E549D7201C1BDB008534A2 /* CabinetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetCell.swift; sourceTree = "<group>"; };
+		30E549D92020FC20008534A2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +69,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300558BB2018FAF40004A106 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				3070241D201BAB4F008A0B5F /* Aircraft+CoreDataClass.swift */,
+				3070241E201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift */,
+				3070241B201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift */,
+				3070241C201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift */,
+				30702419201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift */,
+				3070241A201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift */,
+				30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */,
+				3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */,
+			);
+			path = CoreDataModels;
+			sourceTree = "<group>";
+		};
 		300F80292017BDDB00299BFC = {
 			isa = PBXGroup;
 			children = (
@@ -57,14 +104,31 @@
 			isa = PBXGroup;
 			children = (
 				300F80352017BDDB00299BFC /* AppDelegate.swift */,
-				300F80372017BDDB00299BFC /* ViewController.swift */,
+				30702401201A73AE008A0B5F /* CoreDataStack.swift */,
+				30E549D92020FC20008534A2 /* CoreDataManager.swift */,
+				3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */,
+				30E549D4201C17F1008534A2 /* ViewControllers */,
 				300F80392017BDDB00299BFC /* Main.storyboard */,
+				30E549D7201C1BDB008534A2 /* CabinetCell.swift */,
+				30E549D0201C148A008534A2 /* AircraftCell.swift */,
+				30CDBF0B202543250074C7CF /* CabinetItemCell.swift */,
+				300558BB2018FAF40004A106 /* CoreDataModels */,
 				300F803F2017BDDC00299BFC /* Assets.xcassets */,
 				300F80412017BDDC00299BFC /* LaunchScreen.storyboard */,
 				300F80442017BDDC00299BFC /* Info.plist */,
 				300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */,
 			);
 			path = Stash;
+			sourceTree = "<group>";
+		};
+		30E549D4201C17F1008534A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30702417201AC924008A0B5F /* AircraftTableVC.swift */,
+				30E549D5201C188B008534A2 /* CabinetVC.swift */,
+				30CDBF09202542F20074C7CF /* CabinetItemVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +203,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */,
+				3070242C201BAEA4008A0B5F /* CoreDataModelEnum.swift in Sources */,
+				30E549D8201C1BDB008534A2 /* CabinetCell.swift in Sources */,
+				30E549D1201C148A008534A2 /* AircraftCell.swift in Sources */,
+				30E549DA2020FC20008534A2 /* CoreDataManager.swift in Sources */,
 				300F803E2017BDDC00299BFC /* Stash.xcdatamodeld in Sources */,
-				300F80382017BDDB00299BFC /* ViewController.swift in Sources */,
+				30702420201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift in Sources */,
+				30702411201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift in Sources */,
+				30E549D6201C188B008534A2 /* CabinetVC.swift in Sources */,
+				30702422201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift in Sources */,
+				30CDBF0A202542F20074C7CF /* CabinetItemVC.swift in Sources */,
+				30702421201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift in Sources */,
+				30CDBF0C202543250074C7CF /* CabinetItemCell.swift in Sources */,
+				3070241F201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift in Sources */,
 				300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */,
+				30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */,
+				30702418201AC924008A0B5F /* AircraftTableVC.swift in Sources */,
+				30702424201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift in Sources */,
+				30702423201BAB4F008A0B5F /* Aircraft+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
