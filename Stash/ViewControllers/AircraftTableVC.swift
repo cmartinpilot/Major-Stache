@@ -23,9 +23,6 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        
     }
 
 
@@ -75,8 +72,8 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
         
         switch segueIdentifier {
         case "addAircraftSegue":
-            let newAircraft = self.dataManager?.createNewObject(type: .aircraft, withParent: nil)
-            cabinetController.aircraft = newAircraft as? Aircraft
+            let newAircraft: Aircraft? = self.dataManager?.createNew(object: Aircraft.self, withParent: nil)
+            cabinetController.aircraft = newAircraft
         case "selectAircraftSegue":
             guard let indexPath = self.tableView.indexPathForSelectedRow else {return}
             let aircraft = (self.fetchedResultsController?.object(at: indexPath))
@@ -110,9 +107,12 @@ extension AircraftTableVC: NSFetchedResultsControllerDelegate{
             print("update")
             guard let path = indexPath, let cell = self.tableView.cellForRow(at: path) else {return}
             self.configure(cell: cell as! AircraftCell, atIndexPath: path)
-            self.tableView.reloadRows(at: [path], with: .automatic)
+            //self.tableView.reloadRows(at: [path], with: .automatic)
         case .move:
             print("Move")
+            guard let path = indexPath, let newPath = newIndexPath else {return}
+            self.tableView.deleteRows(at: [path], with: .automatic)
+            self.tableView.insertRows(at: [newPath], with: .automatic)
         }
     }
     

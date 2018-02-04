@@ -14,9 +14,7 @@ import CloudKit
 class CoreDataManager{
     
     private let stack: CoreDataStack
-    public lazy var mainContext:NSManagedObjectContext = self.stack.mainContext
-    
-    
+
     public init(stack: CoreDataStack) {
         self.stack = stack
     }
@@ -45,13 +43,20 @@ class CoreDataManager{
         
         return controller
     }
-    
+    public func createNew<Object: NSManagedObject>(object: Object.Type, withParent parent: NSManagedObject?) -> Object where Object: Populatable{
+        
+        let newObject = Object(context: self.stack.mainContext)
+        newObject.populate(with: parent)
+        
+        return newObject
+        
+    }
     
     public func createNewObject(type: ModelType, withParent parent: NSManagedObject?) -> NSManagedObject{
         
         switch type{
         case .aircraft:
-            let aircraft = Aircraft(context: self.mainContext)
+            let aircraft = Aircraft(context: self.stack.mainContext)
             aircraft.dateUpdated = NSDate()
             aircraft.recordID = self.createRecordID(forType: type)
             return aircraft
@@ -59,14 +64,14 @@ class CoreDataManager{
             
             let png = UIImagePNGRepresentation(#imageLiteral(resourceName: "AddImage.pdf"))
             
-            let cabinet = Cabinet(context: self.mainContext)
+            let cabinet = Cabinet(context: self.stack.mainContext)
             cabinet.aircraft = parent as? Aircraft
             cabinet.dateUpdated = NSDate()
             cabinet.image = png as NSData?
             cabinet.recordID = self.createRecordID(forType: type)
             return cabinet
         case .cabinetItem:
-            let cabinetItem = CabinetItem(context: self.mainContext)
+            let cabinetItem = CabinetItem(context: self.stack.mainContext)
             cabinetItem.cabinet = parent as? Cabinet
             cabinetItem.isAvailable = true
             cabinetItem.quantity = 0
@@ -78,18 +83,19 @@ class CoreDataManager{
     
     public func delete(object: NSManagedObject){
         
-        self.mainContext.delete(object)
+        self.stack.mainContext.delete(object)
+        self.saveData()
         
     }
     
     public func saveData(){
         
-        self.mainContext.performAndWait {
+        self.stack.mainContext.performAndWait {
             
-            guard self.mainContext.hasChanges == true else {return}
+            guard self.stack.mainContext.hasChanges == true else {return}
             
             do{
-                try self.mainContext.save()
+                try self.stack.mainContext.save()
             }catch let error as NSError{
                 print("Error saving Main Context: \(error.description)")
             }
@@ -110,10 +116,6 @@ class CoreDataManager{
                 i = i + 1
             }
         })
-        
-        
-        
-        
     }
     
     //MARK: - RecordID creator helper

@@ -14,3 +14,12 @@ import CoreData
 public class Aircraft: NSManagedObject {
 
 }
+extension Aircraft: Populatable{
+
+    
+    public func populate(with parent: NSManagedObject?) {
+    
+        self.dateUpdated = NSDate()
+        self.recordID = self.createRecordID()
+    }
+}

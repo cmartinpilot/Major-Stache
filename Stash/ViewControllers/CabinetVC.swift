@@ -62,16 +62,16 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
         
         let results = self.fetchedResultsController?.fetchedObjects
         self.dataManager?.reOrder(fetchedResults: results)
-        let newObject = self.dataManager?.createNewObject(type: .cabinet, withParent: self.aircraft)
-        if let cabinet = newObject as? Cabinet{
+        let newObject: Cabinet? = self.dataManager?.createNew(object: Cabinet.self, withParent: self.aircraft)
+        
+        if let cabinet = newObject{
             if let count = self.fetchedResultsController?.fetchedObjects?.count{
                 print("Count of fetch results controller items before insert: \(count)")
                 cabinet.displayOrder = Int16(count)
             }
-            
         }
-        
     }
+    
     // MARK: - Image Picker Functions
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
@@ -103,7 +103,6 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
                     let cabinet = self.fetchedResultsController?.object(at: indexPath)
                     cabinet?.image = UIImagePNGRepresentation(image as! UIImage)! as NSData
                 }
-                
             }
         }
         self.imagePicker.dismiss(animated: true, completion: nil)

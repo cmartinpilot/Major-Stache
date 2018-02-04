@@ -12,6 +12,8 @@
 		300F803E2017BDDC00299BFC /* Stash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */; };
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
+		305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */; };
+		305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */; };
 		30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702401201A73AE008A0B5F /* CoreDataStack.swift */; };
 		30702411201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */; };
 		30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */; };
@@ -39,6 +41,8 @@
 		300F803F2017BDDC00299BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300F80422017BDDC00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300F80442017BDDC00299BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulatableProtocol.swift; sourceTree = "<group>"; };
+		305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtension.swift; sourceTree = "<group>"; };
 		30702401201A73AE008A0B5F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				30702401201A73AE008A0B5F /* CoreDataStack.swift */,
 				30E549D92020FC20008534A2 /* CoreDataManager.swift */,
 				3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */,
+				305D32DE2027B9E0003ADC03 /* Protocols */,
+				305D32DB2027B6D0003ADC03 /* Extensions */,
 				30E549D4201C17F1008534A2 /* ViewControllers */,
 				300F80392017BDDB00299BFC /* Main.storyboard */,
 				30E549D7201C1BDB008534A2 /* CabinetCell.swift */,
@@ -119,6 +125,22 @@
 				300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */,
 			);
 			path = Stash;
+			sourceTree = "<group>";
+		};
+		305D32DB2027B6D0003ADC03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		305D32DE2027B9E0003ADC03 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		30E549D4201C17F1008534A2 /* ViewControllers */ = {
@@ -215,9 +237,11 @@
 				30702422201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift in Sources */,
 				30CDBF0A202542F20074C7CF /* CabinetItemVC.swift in Sources */,
 				30702421201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift in Sources */,
+				305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */,
 				30CDBF0C202543250074C7CF /* CabinetItemCell.swift in Sources */,
 				3070241F201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift in Sources */,
 				300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */,
+				305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */,
 				30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */,
 				30702418201AC924008A0B5F /* AircraftTableVC.swift in Sources */,
 				30702424201BAB4F008A0B5F /* Aircraft+CoreDataProperties.swift in Sources */,

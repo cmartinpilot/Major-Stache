@@ -7,7 +7,7 @@
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 protocol Orderable {
@@ -19,4 +19,15 @@ public class Cabinet: NSManagedObject, Orderable {
 
 }
 
-
+extension Cabinet: Populatable{
+    
+    public func populate(with parent: NSManagedObject?){
+        
+        let png = UIImagePNGRepresentation(#imageLiteral(resourceName: "AddImage.pdf"))
+        
+        self.dateUpdated = NSDate()
+        self.recordID = self.createRecordID()
+        self.aircraft = parent as? Aircraft
+        self.image = png as NSData?
+    }
+}
