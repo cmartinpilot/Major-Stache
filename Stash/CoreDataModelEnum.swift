@@ -9,6 +9,7 @@
 import Foundation
 
 enum ModelType:String {
+    
     case aircraft = "Aircraft"
     case cabinet = "Cabinet"
     case cabinetItem = "CabinetItem"

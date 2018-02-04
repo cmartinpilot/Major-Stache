@@ -23,6 +23,29 @@ class CoreDataManager{
     
     //MARK: - Public accessors
 
+    public func fetchedResultsController<Result: NSFetchRequestResult, Delegate: NSFetchedResultsControllerDelegate>(type: ModelType, sortDescriptors:[NSSortDescriptor], predicate: NSPredicate?, delegate: Delegate) -> NSFetchedResultsController<Result>{
+        
+        let moc = self.stack.mainContext
+        
+        let fetchRequest:NSFetchRequest<Result> = NSFetchRequest(entityName: type.rawValue)
+        fetchRequest.sortDescriptors = sortDescriptors
+        if predicate != nil{
+            fetchRequest.predicate = predicate!
+        }
+        
+        let controller = NSFetchedResultsController<Result>(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = delegate
+        
+        do {
+            try controller.performFetch()
+        } catch let error as NSError {
+            print("Error fetching Aircraft from Core Data. \(error.description)")
+        }
+        
+        return controller
+    }
+    
     
     public func createNewObject(type: ModelType, withParent parent: NSManagedObject?) -> NSManagedObject{
         

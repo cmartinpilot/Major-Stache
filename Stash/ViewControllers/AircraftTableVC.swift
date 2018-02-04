@@ -11,22 +11,12 @@ import CoreData
 
 class AircraftTableVC: UITableViewController, CoreDataConforming {
     
-    
-    
-    var dataManager: CoreDataManager?
-    let fetchRequest:NSFetchRequest<Aircraft> = Aircraft.fetchRequest()
+    public var dataManager: CoreDataManager?
     fileprivate lazy var fetchedResultsController:NSFetchedResultsController<Aircraft>? = {
+       
+        let sortDescriptors = NSSortDescriptor(key: "tailnumber", ascending: true)
         
-        guard let moc = self.dataManager?.mainContext else {return nil}
-        let fetchRequest:NSFetchRequest<Aircraft> = Aircraft.fetchRequest()
-        
-        let sortDescriptors = NSSortDescriptor(keyPath: \Aircraft.tailnumber, ascending: true)
-        
-        fetchRequest.sortDescriptors = [sortDescriptors]
-        
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        
-        controller.delegate = self
+        let controller:NSFetchedResultsController<Aircraft>? = (self.dataManager?.fetchedResultsController(type: .aircraft, sortDescriptors: [sortDescriptors], predicate: nil, delegate: self))
         
         return controller
     }()
@@ -34,11 +24,7 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        do {
-            try self.fetchedResultsController?.performFetch()
-        } catch let error as NSError {
-            print("Error fetching Aircraft from Core Data. \(error.description)")
-        }
+
         
     }
 

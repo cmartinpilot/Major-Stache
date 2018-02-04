@@ -17,23 +17,16 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
     private var currentTextField: UITextField? = nil
     private let imagePicker:UIImagePickerController = UIImagePickerController()
     private var cellOfTappedImageView: UITableViewCell? = nil
-    fileprivate let fetchRequest: NSFetchRequest<Cabinet> = Cabinet.fetchRequest()
+    
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Cabinet>? = {
         
-        guard let moc = self.dataManager?.mainContext else {return nil}
-        
-        let keyPath = \Cabinet.displayOrder
-        let sortDescriptors = NSSortDescriptor(keyPath: keyPath, ascending: true)
+        let sortDescriptors = NSSortDescriptor(keyPath: \Cabinet.displayOrder, ascending: true)
+        var predicate: NSPredicate? = nil
         if self.aircraft != nil {
-            let predicate = NSPredicate(format: "aircraft == %@", aircraft!)
-            self.fetchRequest.predicate = predicate
+            predicate = NSPredicate(format: "aircraft == %@", aircraft!)
         }
         
-        self.fetchRequest.sortDescriptors = [sortDescriptors]
-        
-        var controller = NSFetchedResultsController(fetchRequest: self.fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
-        
-        controller.delegate = self
+        var controller:NSFetchedResultsController<Cabinet>? = (self.dataManager?.fetchedResultsController(type: .cabinet, sortDescriptors: [sortDescriptors], predicate: predicate, delegate: self))
         
         return controller
     }()
@@ -44,11 +37,6 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        do {
-            try self.fetchedResultsController?.performFetch()
-        } catch let error as NSError {
-            print("Error fetching Cabinets from Core Data. \(error.description)")
-        }
         
         self.cabinetTableView.allowsSelection = false
         
