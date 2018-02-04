@@ -20,7 +20,7 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
     fileprivate let fetchRequest: NSFetchRequest<Cabinet> = Cabinet.fetchRequest()
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Cabinet>? = {
         
-        guard let moc = self.dataManager?.topScratchPadPage else {return nil}
+        guard let moc = self.dataManager?.mainContext else {return nil}
         
         let keyPath = \Cabinet.displayOrder
         let sortDescriptors = NSSortDescriptor(keyPath: keyPath, ascending: true)
@@ -61,6 +61,10 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
         
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        self.dataManager?.saveData()
+    }
+    
     @IBAction func addCabinetTapped(_ sender: Any) {
         
         for field in self.textFields{
@@ -165,7 +169,7 @@ extension CabinetVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             guard let cabinet = self.fetchedResultsController?.object(at: indexPath) else {return}
-            self.dataManager?.topScratchPadPage.delete(cabinet)
+            self.dataManager?.delete(object: cabinet)
         }
     }
 }

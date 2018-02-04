@@ -10,13 +10,11 @@ import UIKit
 import CoreData
 import CloudKit
 
-typealias ScratchPadPage = NSManagedObjectContext
 
 class CoreDataManager{
     
     private let stack: CoreDataStack
-    private var scratchPad: [ScratchPadPage] = []
-    public lazy var topScratchPadPage: ScratchPadPage = self.stack.mainContext
+    public lazy var mainContext:NSManagedObjectContext = self.stack.mainContext
     
     
     public init(stack: CoreDataStack) {
@@ -24,33 +22,13 @@ class CoreDataManager{
     }
     
     //MARK: - Public accessors
-    public func beginScratchPadPage(){
-        
-        let page = self.scratchpadpage()
-        self.push(page: page)
-        print("BeginScratchPadPage.  Page count \(self.scratchPad.count)")
-        self.topScratchPadPage = self.scratchPad.first!
-    }
-    
-    public func objectInOldPageFoundInNew(objectInOldPage object: NSManagedObject) -> NSManagedObject{
-        
-        let id = object.objectID
-        return self.topScratchPadPage.object(with: id)
-    }
-    
-    public func endScratchPadPage(){
-        
-        guard self.scratchPad.count > 0 else {return}
-        self.pop()
-        print("EndScratchPadPage.  Page count \(self.scratchPad.count)")
-        self.topScratchPadPage = self.scratchPad.first ?? self.stack.mainContext
-    }
+
     
     public func createNewObject(type: ModelType, withParent parent: NSManagedObject?) -> NSManagedObject{
         
         switch type{
         case .aircraft:
-            let aircraft = Aircraft(context: self.topScratchPadPage)
+            let aircraft = Aircraft(context: self.mainContext)
             aircraft.dateUpdated = NSDate()
             aircraft.recordID = self.createRecordID(forType: type)
             return aircraft
@@ -58,14 +36,14 @@ class CoreDataManager{
             
             let png = UIImagePNGRepresentation(#imageLiteral(resourceName: "AddImage.pdf"))
             
-            let cabinet = Cabinet(context: self.topScratchPadPage)
+            let cabinet = Cabinet(context: self.mainContext)
             cabinet.aircraft = parent as? Aircraft
             cabinet.dateUpdated = NSDate()
             cabinet.image = png as NSData?
             cabinet.recordID = self.createRecordID(forType: type)
             return cabinet
         case .cabinetItem:
-            let cabinetItem = CabinetItem(context: self.topScratchPadPage)
+            let cabinetItem = CabinetItem(context: self.mainContext)
             cabinetItem.cabinet = parent as? Cabinet
             cabinetItem.isAvailable = true
             cabinetItem.quantity = 0
@@ -77,35 +55,18 @@ class CoreDataManager{
     
     public func delete(object: NSManagedObject){
         
-        self.topScratchPadPage.delete(object)
+        self.mainContext.delete(object)
         
     }
     
     public func saveData(){
         
-        if self.scratchPad.count > 0 {
+        self.mainContext.performAndWait {
             
-            for page in self.scratchPad{
-                page.performAndWait({
-                    
-                    guard page.hasChanges == true else {return}
-                    
-                    do{
-                        try page.save()
-                    }catch let error as NSError{
-                        print("Error saving Scratchpad page: \(error.description)")
-                    }
-                    
-                })
-            }
-        }
-        
-        self.stack.mainContext.performAndWait {
-            
-            guard self.stack.mainContext.hasChanges == true else {return}
+            guard self.mainContext.hasChanges == true else {return}
             
             do{
-                try self.stack.mainContext.save()
+                try self.mainContext.save()
             }catch let error as NSError{
                 print("Error saving Main Context: \(error.description)")
             }
@@ -114,7 +75,7 @@ class CoreDataManager{
         self.stack.savePrivateContext()
     }
     
-    func reOrder(fetchedResults: [NSManagedObject]?){
+    public func reOrder(fetchedResults: [NSManagedObject]?){
         guard fetchedResults != nil,
             let results = fetchedResults,
             results.count > 0 else {return}
@@ -132,28 +93,7 @@ class CoreDataManager{
         
     }
     
-    
-    //MARK: - Private ScratchPad Stack
-    private func push(page: ScratchPadPage){
-        
-        if self.scratchPad.count > 0{
-            page.parent = self.scratchPad.first
-            self.scratchPad.insert(page, at: 0)
-        }else{
-            page.parent = self.stack.mainContext
-            self.scratchPad.insert(page, at: 0)
-        }
-    }
-    
-    private func pop(){
-        self.scratchPad.removeFirst()
-    }
-    //MARK: - Private helpers
-    private func scratchpadpage() -> ScratchPadPage{
-        let page = ScratchPadPage(concurrencyType: .mainQueueConcurrencyType)
-        return page
-    }
-    
+    //MARK: - RecordID creator helper
     private func createRecordID(forType type: ModelType) -> CKRecordID{
         
         let typeString = type.rawValue

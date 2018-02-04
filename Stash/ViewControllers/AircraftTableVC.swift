@@ -17,7 +17,7 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
     let fetchRequest:NSFetchRequest<Aircraft> = Aircraft.fetchRequest()
     fileprivate lazy var fetchedResultsController:NSFetchedResultsController<Aircraft>? = {
         
-        guard let moc = self.dataManager?.topScratchPadPage else {return nil}
+        guard let moc = self.dataManager?.mainContext else {return nil}
         let fetchRequest:NSFetchRequest<Aircraft> = Aircraft.fetchRequest()
         
         let sortDescriptors = NSSortDescriptor(keyPath: \Aircraft.tailnumber, ascending: true)
@@ -74,7 +74,7 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             guard let aircraft = (self.fetchedResultsController?.object(at: indexPath)) else {return}
-            self.dataManager?.topScratchPadPage.delete(aircraft)
+            self.dataManager?.delete(object: aircraft)
         }
     }
     
@@ -84,8 +84,7 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
         
         guard let segueIdentifier = segue.identifier,
             let cabinetController = segue.destination as? CabinetVC else {return}
-        
-        self.dataManager?.beginScratchPadPage()
+
         cabinetController.dataManager = self.dataManager
         
         switch segueIdentifier {
@@ -95,27 +94,12 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
         case "selectAircraftSegue":
             guard let indexPath = self.tableView.indexPathForSelectedRow else {return}
             let aircraft = (self.fetchedResultsController?.object(at: indexPath))
-            let newContextObject = self.dataManager?.objectInOldPageFoundInNew(objectInOldPage: aircraft!)
-            cabinetController.aircraft = newContextObject as? Aircraft
+            cabinetController.aircraft = aircraft
         default:
             print("Segue undefined")
         }
     }
-    
-    
-    //MARK: - Unwind
-    @IBAction func unwindFromCabinetVC(sender: UIStoryboardSegue){
-
-        self.dataManager?.saveData()
-        
-        self.dataManager?.endScratchPadPage()
-    }
-
-    @IBAction func unwindFromCabinetVCCancel(sender: UIStoryboardSegue){
-        
-        self.dataManager?.endScratchPadPage()
-    }
-    
+   
 }
 
 //MARK: - FetchedResultsControllerDelegate

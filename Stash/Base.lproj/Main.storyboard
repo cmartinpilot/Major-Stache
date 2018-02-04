@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,7 +67,6 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p2Z-T6-SkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="ygi-Ya-4KC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="336.80000000000001" y="143.47826086956522"/>
         </scene>
@@ -159,23 +157,11 @@
                         <viewLayoutGuide key="safeArea" id="ILF-Kb-mWh"/>
                     </view>
                     <navigationItem key="navigationItem" id="na9-Gu-BKN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="R4c-GK-3GQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PDt-s0-yaa">
                             <connections>
-                                <segue destination="MDH-La-cxm" kind="unwind" unwindAction="unwindFromCabinetVCCancelWithSender:" id="Beg-oF-j8c"/>
+                                <action selector="addCabinetTapped:" destination="0dj-nQ-SmQ" id="zHK-Y3-UAF"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="1vl-Bf-GXH">
-                                <connections>
-                                    <segue destination="ygi-Ya-4KC" kind="unwind" unwindAction="unwindFromCabinetVCWithSender:" id="fe4-t5-DUK"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="add" id="PDt-s0-yaa">
-                                <connections>
-                                    <action selector="addCabinetTapped:" destination="0dj-nQ-SmQ" id="zHK-Y3-UAF"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="cabinetTableView" destination="TrQ-pt-YWf" id="WHg-y5-XHm"/>
@@ -183,7 +169,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bpd-l5-TyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MDH-La-cxm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1152.8" y="144.3778110944528"/>
         </scene>
@@ -229,11 +214,7 @@
                         <viewLayoutGuide key="safeArea" id="EOW-12-zBV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="DCc-lG-vQP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6o0-D4-Rzh"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="save" id="4xI-91-twW"/>
-                            <barButtonItem systemItem="add" id="zNf-lH-aNX"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zNf-lH-aNX"/>
                     </navigationItem>
                     <connections>
                         <outlet property="cabinetImageView" destination="kKv-bJ-W9j" id="P7g-6D-Ehr"/>
