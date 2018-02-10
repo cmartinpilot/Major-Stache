@@ -42,14 +42,20 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
         
         self.imagePicker.delegate = self
         
-        self.tailnumber.text = self.aircraft?.tailnumber
         self.tailnumber.delegate = self
-        
         self.registerForKeyboardNotifications()
         
+        if self.aircraft?.tailnumber == nil{
+            self.tailnumber.text = "N"
+            self.tailnumber.becomeFirstResponder()
+        }else{
+            self.tailnumber.text = self.aircraft?.tailnumber
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        guard self.aircraft != nil else {return}
+        
         self.dataManager?.saveData()
     }
     
@@ -116,6 +122,23 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
             if field.isFirstResponder{field.resignFirstResponder()}
         }
         if self.tailnumber.isFirstResponder{self.tailnumber.resignFirstResponder()}
+    }
+    
+    @IBAction func cabinetItemsTapped(_ sender: Any) {
+        guard let button = sender as? UIButton,
+            let cell = (button.superview?.superview as? UITableViewCell),
+            let cabinetCell = cell as? CabinetCell,
+            let indexPath = self.cabinetTableView.indexPath(for: cabinetCell),
+            let cabinet = self.fetchedResultsController?.object(at: indexPath) else {fatalError("Cannot find cabinet")}
+        
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "cabinetItemStoryboardID")
+        if let cabinetItemController = controller as? CabinetItemVC{
+            cabinetItemController.cabinet = cabinet
+            cabinetItemController.dataManager = self.dataManager
+            
+            self.navigationController?.pushViewController(cabinetItemController, animated: true)
+        }
+        
     }
 }
 
@@ -212,9 +235,11 @@ extension CabinetVC: UITextFieldDelegate{
             
             if textField == self.tailnumber {
                 if let text = textField.text{
-                    self.aircraft?.tailnumber = text
-                }else{
-                    self.aircraft?.tailnumber = ""
+                    if textField.text != ""{
+                        self.aircraft?.tailnumber = text
+                    }else{
+                        self.aircraft?.tailnumber = "NO TAIL"
+                    }
                 }
             }
         }
@@ -223,7 +248,6 @@ extension CabinetVC: UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.currentTextField = textField
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -237,7 +261,6 @@ extension CabinetVC{
     private func registerForKeyboardNotifications(){
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     

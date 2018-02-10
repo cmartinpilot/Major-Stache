@@ -37,6 +37,7 @@ class CoreDataManager{
         
         do {
             try controller.performFetch()
+            print("Fetch resluts count: \(String(describing: controller.fetchedObjects?.count))")
         } catch let error as NSError {
             print("Error fetching Aircraft from Core Data. \(error.description)")
         }
@@ -52,34 +53,6 @@ class CoreDataManager{
         
     }
     
-    public func createNewObject(type: ModelType, withParent parent: NSManagedObject?) -> NSManagedObject{
-        
-        switch type{
-        case .aircraft:
-            let aircraft = Aircraft(context: self.stack.mainContext)
-            aircraft.dateUpdated = NSDate()
-            aircraft.recordID = self.createRecordID(forType: type)
-            return aircraft
-        case .cabinet:
-            
-            let png = UIImagePNGRepresentation(#imageLiteral(resourceName: "AddImage.pdf"))
-            
-            let cabinet = Cabinet(context: self.stack.mainContext)
-            cabinet.aircraft = parent as? Aircraft
-            cabinet.dateUpdated = NSDate()
-            cabinet.image = png as NSData?
-            cabinet.recordID = self.createRecordID(forType: type)
-            return cabinet
-        case .cabinetItem:
-            let cabinetItem = CabinetItem(context: self.stack.mainContext)
-            cabinetItem.cabinet = parent as? Cabinet
-            cabinetItem.isAvailable = true
-            cabinetItem.quantity = 0
-            cabinetItem.dateUpdated = NSDate()
-            cabinetItem.recordID = self.createRecordID(forType: type)
-            return cabinetItem
-        }
-    }
     
     public func delete(object: NSManagedObject){
         
