@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F80352017BDDB00299BFC /* AppDelegate.swift */; };
 		300F803B2017BDDB00299BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80392017BDDB00299BFC /* Main.storyboard */; };
-		300F803E2017BDDC00299BFC /* Stash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */; };
+		300F803E2017BDDC00299BFC /* Stache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */; };
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
 		305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */; };
@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		300F80322017BDDB00299BFC /* Stash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		300F80322017BDDB00299BFC /* Stache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300F80352017BDDB00299BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		300F803A2017BDDB00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		300F803D2017BDDC00299BFC /* Stash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stash.xcdatamodel; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 		300F80292017BDDB00299BFC = {
 			isa = PBXGroup;
 			children = (
-				300F80342017BDDB00299BFC /* Stash */,
+				300F80342017BDDB00299BFC /* Stache */,
 				300F80332017BDDB00299BFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,12 +103,12 @@
 		300F80332017BDDB00299BFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				300F80322017BDDB00299BFC /* Stash.app */,
+				300F80322017BDDB00299BFC /* Stache.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		300F80342017BDDB00299BFC /* Stash */ = {
+		300F80342017BDDB00299BFC /* Stache */ = {
 			isa = PBXGroup;
 			children = (
 				300F80352017BDDB00299BFC /* AppDelegate.swift */,
@@ -120,16 +120,24 @@
 				30E549D4201C17F1008534A2 /* ViewControllers */,
 				300F80392017BDDB00299BFC /* Main.storyboard */,
 				306BE73D2028A61B00936022 /* Drawn Views */,
-				30E549D0201C148A008534A2 /* AircraftCell.swift */,
-				30E549D7201C1BDB008534A2 /* CabinetCell.swift */,
-				30CDBF0B202543250074C7CF /* CabinetItemCell.swift */,
+				303F89872030CF8500279B2D /* TableViewCells */,
 				300558BB2018FAF40004A106 /* CoreDataModels */,
 				300F803F2017BDDC00299BFC /* Assets.xcassets */,
 				300F80412017BDDC00299BFC /* LaunchScreen.storyboard */,
 				300F80442017BDDC00299BFC /* Info.plist */,
-				300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */,
+				300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */,
 			);
-			path = Stash;
+			path = Stache;
+			sourceTree = "<group>";
+		};
+		303F89872030CF8500279B2D /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				30E549D0201C148A008534A2 /* AircraftCell.swift */,
+				30E549D7201C1BDB008534A2 /* CabinetCell.swift */,
+				30CDBF0B202543250074C7CF /* CabinetItemCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		305D32DB2027B6D0003ADC03 /* Extensions */ = {
@@ -170,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		300F80312017BDDB00299BFC /* Stash */ = {
+		300F80312017BDDB00299BFC /* Stache */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stash" */;
+			buildConfigurationList = 300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stache" */;
 			buildPhases = (
 				300F802E2017BDDB00299BFC /* Sources */,
 				300F802F2017BDDB00299BFC /* Frameworks */,
@@ -182,9 +190,9 @@
 			);
 			dependencies = (
 			);
-			name = Stash;
+			name = Stache;
 			productName = Stash;
-			productReference = 300F80322017BDDB00299BFC /* Stash.app */;
+			productReference = 300F80322017BDDB00299BFC /* Stache.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stash" */;
+			buildConfigurationList = 300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stache" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,7 +224,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				300F80312017BDDB00299BFC /* Stash */,
+				300F80312017BDDB00299BFC /* Stache */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +252,7 @@
 				30E549D8201C1BDB008534A2 /* CabinetCell.swift in Sources */,
 				30E549D1201C148A008534A2 /* AircraftCell.swift in Sources */,
 				30E549DA2020FC20008534A2 /* CoreDataManager.swift in Sources */,
-				300F803E2017BDDC00299BFC /* Stash.xcdatamodeld in Sources */,
+				300F803E2017BDDC00299BFC /* Stache.xcdatamodeld in Sources */,
 				30702420201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift in Sources */,
 				306BE73C2028A5FD00936022 /* CircleView.swift in Sources */,
 				30702411201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift in Sources */,
@@ -400,9 +408,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
-				INFOPLIST_FILE = Stash/Info.plist;
+				INFOPLIST_FILE = Stache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,9 +423,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
-				INFOPLIST_FILE = Stash/Info.plist;
+				INFOPLIST_FILE = Stache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -427,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stash" */ = {
+		300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300F80452017BDDC00299BFC /* Debug */,
@@ -436,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stash" */ = {
+		300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300F80482017BDDC00299BFC /* Debug */,
@@ -448,13 +456,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		300F803C2017BDDC00299BFC /* Stash.xcdatamodeld */ = {
+		300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				300F803D2017BDDC00299BFC /* Stash.xcdatamodel */,
 			);
 			currentVersion = 300F803D2017BDDC00299BFC /* Stash.xcdatamodel */;
-			path = Stash.xcdatamodeld;
+			path = Stache.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
