@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Aircraft" representedClassName="Aircraft" syncable="YES">
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="recordID" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="tailnumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cabinets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Cabinet" inverseName="aircraft" inverseEntity="Cabinet" syncable="YES"/>
+    </entity>
+    <entity name="Cabinet" representedClassName="Cabinet" syncable="YES">
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recordID" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="aircraft" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Aircraft" inverseName="cabinets" inverseEntity="Aircraft" syncable="YES"/>
+        <relationship name="cabinetItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CabinetItem" inverseName="cabinet" inverseEntity="CabinetItem" syncable="YES"/>
+    </entity>
+    <entity name="CabinetItem" representedClassName="CabinetItem" syncable="YES">
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isAvailable" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="recordID" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="cabinet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cabinet" inverseName="cabinetItems" inverseEntity="Cabinet" syncable="YES"/>
+    </entity>
+    <entity name="TokenGenerator" representedClassName="TokenGenerator" syncable="YES">
+        <attribute name="token" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Aircraft" positionX="-333" positionY="-168" width="128" height="103"/>
+        <element name="Cabinet" positionX="-171" positionY="-81" width="128" height="150"/>
+        <element name="CabinetItem" positionX="-11" positionY="9" width="128" height="150"/>
+        <element name="TokenGenerator" positionX="-326" positionY="75" width="128" height="60"/>
+    </elements>
+</model>

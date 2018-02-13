@@ -12,6 +12,7 @@
 		300F803E2017BDDC00299BFC /* Stache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */; };
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
+		303F89892032596D00279B2D /* CloudDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F89882032596D00279B2D /* CloudDataManager.swift */; };
 		305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */; };
 		305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */; };
 		306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BE7392028161F00936022 /* AddCabinetItemVC.swift */; };
@@ -36,13 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		300F80322017BDDB00299BFC /* Stache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		300F80322017BDDB00299BFC /* Major Stache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Major Stache.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		300F80352017BDDB00299BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		300F803A2017BDDB00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		300F803D2017BDDC00299BFC /* Stash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stash.xcdatamodel; sourceTree = "<group>"; };
 		300F803F2017BDDC00299BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300F80422017BDDC00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300F80442017BDDC00299BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303F89882032596D00279B2D /* CloudDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataManager.swift; sourceTree = "<group>"; };
 		305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulatableProtocol.swift; sourceTree = "<group>"; };
 		305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtension.swift; sourceTree = "<group>"; };
 		306BE7392028161F00936022 /* AddCabinetItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCabinetItemVC.swift; sourceTree = "<group>"; };
@@ -95,23 +97,25 @@
 		300F80292017BDDB00299BFC = {
 			isa = PBXGroup;
 			children = (
-				300F80342017BDDB00299BFC /* Stache */,
+				300F80342017BDDB00299BFC /* Major Stache */,
 				300F80332017BDDB00299BFC /* Products */,
+				303F898B20325B2E00279B2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		300F80332017BDDB00299BFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				300F80322017BDDB00299BFC /* Stache.app */,
+				300F80322017BDDB00299BFC /* Major Stache.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		300F80342017BDDB00299BFC /* Stache */ = {
+		300F80342017BDDB00299BFC /* Major Stache */ = {
 			isa = PBXGroup;
 			children = (
 				300F80352017BDDB00299BFC /* AppDelegate.swift */,
+				303F89882032596D00279B2D /* CloudDataManager.swift */,
 				30702401201A73AE008A0B5F /* CoreDataStack.swift */,
 				30E549D92020FC20008534A2 /* CoreDataManager.swift */,
 				3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */,
@@ -127,7 +131,7 @@
 				300F80442017BDDC00299BFC /* Info.plist */,
 				300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */,
 			);
-			path = Stache;
+			path = "Major Stache";
 			sourceTree = "<group>";
 		};
 		303F89872030CF8500279B2D /* TableViewCells */ = {
@@ -138,6 +142,13 @@
 				30CDBF0B202543250074C7CF /* CabinetItemCell.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		303F898B20325B2E00279B2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		305D32DB2027B6D0003ADC03 /* Extensions */ = {
@@ -178,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		300F80312017BDDB00299BFC /* Stache */ = {
+		300F80312017BDDB00299BFC /* Major Stache */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stache" */;
+			buildConfigurationList = 300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Major Stache" */;
 			buildPhases = (
 				300F802E2017BDDB00299BFC /* Sources */,
 				300F802F2017BDDB00299BFC /* Frameworks */,
@@ -190,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = Stache;
+			name = "Major Stache";
 			productName = Stash;
-			productReference = 300F80322017BDDB00299BFC /* Stache.app */;
+			productReference = 300F80322017BDDB00299BFC /* Major Stache.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,10 +219,18 @@
 					300F80312017BDDB00299BFC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = 300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stache" */;
+			buildConfigurationList = 300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Major Stache" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,7 +243,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				300F80312017BDDB00299BFC /* Stache */,
+				300F80312017BDDB00299BFC /* Major Stache */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +279,7 @@
 				30702422201BAB4F008A0B5F /* Cabinet+CoreDataProperties.swift in Sources */,
 				306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */,
 				30CDBF0A202542F20074C7CF /* CabinetItemVC.swift in Sources */,
+				303F89892032596D00279B2D /* CloudDataManager.swift in Sources */,
 				30702421201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift in Sources */,
 				305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */,
 				30CDBF0C202543250074C7CF /* CabinetItemCell.swift in Sources */,
@@ -408,9 +428,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
-				INFOPLIST_FILE = Stache/Info.plist;
+				INFOPLIST_FILE = "Major Stache/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stache;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martindev.Major Stache";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -423,9 +443,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
-				INFOPLIST_FILE = Stache/Info.plist;
+				INFOPLIST_FILE = "Major Stache/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.Stache;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.martindev.Major Stache";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,7 +455,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Stache" */ = {
+		300F802D2017BDDB00299BFC /* Build configuration list for PBXProject "Major Stache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300F80452017BDDC00299BFC /* Debug */,
@@ -444,7 +464,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Stache" */ = {
+		300F80472017BDDC00299BFC /* Build configuration list for PBXNativeTarget "Major Stache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				300F80482017BDDC00299BFC /* Debug */,
