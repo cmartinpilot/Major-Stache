@@ -13,6 +13,7 @@
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
 		303F89892032596D00279B2D /* CloudDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F89882032596D00279B2D /* CloudDataManager.swift */; };
+		303F89932033851400279B2D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303F89922033851400279B2D /* CloudKit.framework */; };
 		305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */; };
 		305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */; };
 		306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BE7392028161F00936022 /* AddCabinetItemVC.swift */; };
@@ -45,6 +46,8 @@
 		300F80422017BDDC00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300F80442017BDDC00299BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		303F89882032596D00279B2D /* CloudDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataManager.swift; sourceTree = "<group>"; };
+		303F89912033851100279B2D /* MajorStache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MajorStache.entitlements; sourceTree = "<group>"; };
+		303F89922033851400279B2D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulatableProtocol.swift; sourceTree = "<group>"; };
 		305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtension.swift; sourceTree = "<group>"; };
 		306BE7392028161F00936022 /* AddCabinetItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCabinetItemVC.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303F89932033851400279B2D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +118,7 @@
 		300F80342017BDDB00299BFC /* MajorStache */ = {
 			isa = PBXGroup;
 			children = (
+				303F89912033851100279B2D /* MajorStache.entitlements */,
 				300F80352017BDDB00299BFC /* AppDelegate.swift */,
 				303F89882032596D00279B2D /* CloudDataManager.swift */,
 				30702401201A73AE008A0B5F /* CoreDataStack.swift */,
@@ -147,6 +152,7 @@
 		303F898B20325B2E00279B2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				303F89922033851400279B2D /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,10 +227,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -426,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MajorStache/MajorStache.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
 				INFOPLIST_FILE = MajorStache/Info.plist;
@@ -441,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MajorStache/MajorStache.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
 				INFOPLIST_FILE = MajorStache/Info.plist;
