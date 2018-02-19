@@ -9,6 +9,7 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 @objc(CabinetItem)
 public class CabinetItem: NSManagedObject, Orderable {
@@ -24,5 +25,36 @@ extension CabinetItem: Populatable{
         self.cabinet = parent as? Cabinet
         self.isAvailable = true
         self.quantity = 0
+    }
+}
+
+extension CabinetItem: CKRecordConvertable{
+    
+    public func convertToCKRecord() -> CKRecord? {
+        guard let recordID = self.recordID as? CKRecordID,
+            let typeString = self.entity.name else {return nil}
+        
+        let isAvailableString = self.isAvailable.description as NSString
+        let quantity = NSNumber(value: self.quantity)
+        let displayOrder = NSNumber(value: self.displayOrder)
+        
+        let record = CKRecord(recordType: typeString, recordID: recordID)
+        
+        if let name = self.name as NSString?{
+            record.setObject(name, forKey: "name")
+        }
+        record.setObject(self.dateUpdated, forKey: "dateUpdated")
+        record.setObject(isAvailableString, forKey: "isAvailable")
+        record.setObject(quantity, forKey: "quantity")
+        record.setObject(displayOrder, forKey: "displayOrder")
+        
+        if let cabinet = self.cabinet{
+            
+            if let recordID = cabinet.recordID as? CKRecordID{
+                let cabinetReference = CKReference(recordID: recordID, action: .deleteSelf)
+                record.setObject(cabinetReference, forKey: "cabinet")
+            }
+        }
+        return record
     }
 }

@@ -28,7 +28,7 @@
         <attribute name="token" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Aircraft" positionX="-333" positionY="-168" width="128" height="103"/>
+        <element name="Aircraft" positionX="-333" positionY="-168" width="128" height="105"/>
         <element name="Cabinet" positionX="-171" positionY="-81" width="128" height="150"/>
         <element name="CabinetItem" positionX="-11" positionY="9" width="128" height="150"/>
         <element name="TokenGenerator" positionX="-326" positionY="75" width="128" height="60"/>

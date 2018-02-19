@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-import CloudKit
 
 
 class CoreDataManager{
@@ -18,6 +17,20 @@ class CoreDataManager{
     public init(stack: CoreDataStack) {
         self.stack = stack
     }
+    
+    public lazy var currentToken: Int64? = {
+        let request:NSFetchRequest<TokenGenerator> = TokenGenerator.fetchRequest()
+        
+        do{
+            let fetchedGenerator =  try self.stack.mainContext.fetch(request)
+            guard fetchedGenerator.count > 0,
+                let firstGenerator = fetchedGenerator.first else {return nil}
+            return Int64(firstGenerator.token)
+        }catch let error as NSError{
+            print("Error fetching token: \(error.description)")
+            return nil
+        }
+    }()
     
     //MARK: - Public accessors
 

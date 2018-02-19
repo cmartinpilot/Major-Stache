@@ -14,6 +14,7 @@
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
 		303F89892032596D00279B2D /* CloudDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F89882032596D00279B2D /* CloudDataManager.swift */; };
 		303F89932033851400279B2D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303F89922033851400279B2D /* CloudKit.framework */; };
+		303F899520376A0800279B2D /* CKRecordConvertableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F899420376A0800279B2D /* CKRecordConvertableProtocol.swift */; };
 		305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */; };
 		305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */; };
 		306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BE7392028161F00936022 /* AddCabinetItemVC.swift */; };
@@ -48,6 +49,7 @@
 		303F89882032596D00279B2D /* CloudDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataManager.swift; sourceTree = "<group>"; };
 		303F89912033851100279B2D /* MajorStache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MajorStache.entitlements; sourceTree = "<group>"; };
 		303F89922033851400279B2D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		303F899420376A0800279B2D /* CKRecordConvertableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKRecordConvertableProtocol.swift; sourceTree = "<group>"; };
 		305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulatableProtocol.swift; sourceTree = "<group>"; };
 		305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtension.swift; sourceTree = "<group>"; };
 		306BE7392028161F00936022 /* AddCabinetItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCabinetItemVC.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				305D32DC2027B9CF003ADC03 /* PopulatableProtocol.swift */,
+				303F899420376A0800279B2D /* CKRecordConvertableProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303F899520376A0800279B2D /* CKRecordConvertableProtocol.swift in Sources */,
 				30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */,
 				3070242C201BAEA4008A0B5F /* CoreDataModelEnum.swift in Sources */,
 				30E549D8201C1BDB008534A2 /* CabinetCell.swift in Sources */,

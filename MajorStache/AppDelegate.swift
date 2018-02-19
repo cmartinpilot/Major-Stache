@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CoreDataConforming{
 
     var window: UIWindow?
     var dataManager:CoreDataManager? = {
-        let stack = CoreDataStack(modelName: "Stache")
+        let stack = CoreDataStack(modelName: "MajorStache")
         let manager = CoreDataManager(stack: stack)
         return manager
     }()
