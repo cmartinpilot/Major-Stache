@@ -24,7 +24,7 @@ extension Cabinet: Populatable{
     
     public func populate(with parent: NSManagedObject?){
         
-        let png = UIImagePNGRepresentation(#imageLiteral(resourceName: "AddImage.pdf"))
+        let png = #imageLiteral(resourceName: "AddImage.pdf").pngData()
         
         self.dateUpdated = NSDate()
         self.recordID = self.createRecordID()
@@ -36,7 +36,7 @@ extension Cabinet: Populatable{
 extension Cabinet: CKRecordConvertable{
     
     public func convertToCKRecord() -> CKRecord? {
-        guard let recordID = self.recordID as? CKRecordID,
+        guard let recordID = self.recordID as? CKRecord.ID,
             let typeString = self.entity.name else {return nil}
         
         let record = CKRecord(recordType: typeString, recordID: recordID)
@@ -49,8 +49,8 @@ extension Cabinet: CKRecordConvertable{
         }
         if let aircraft = self.aircraft{
             
-            if let recordID = aircraft.recordID as? CKRecordID{
-                let aircraftReference = CKReference(recordID: recordID, action: .deleteSelf)
+            if let recordID = aircraft.recordID as? CKRecord.ID{
+                let aircraftReference = CKRecord.Reference(recordID: recordID, action: .deleteSelf)
                 record.setObject(aircraftReference, forKey: "aircraft")
             }
         }

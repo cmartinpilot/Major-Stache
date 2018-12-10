@@ -54,7 +54,7 @@ class AircraftTableVC: UITableViewController, CoreDataConforming {
     }
  
     //MARK: - Deletes
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             guard let aircraft = (self.fetchedResultsController?.object(at: indexPath)) else {return}
             self.dataManager?.delete(object: aircraft)

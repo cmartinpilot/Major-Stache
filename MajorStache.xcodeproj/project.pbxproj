@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30054353205C6E6A005EBEFE /* ChangeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30054352205C6E6A005EBEFE /* ChangeLog.swift */; };
 		300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F80352017BDDB00299BFC /* AppDelegate.swift */; };
 		300F803B2017BDDB00299BFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80392017BDDB00299BFC /* Main.storyboard */; };
 		300F803E2017BDDC00299BFC /* Stache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 300F803C2017BDDC00299BFC /* Stache.xcdatamodeld */; };
 		300F80402017BDDC00299BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300F803F2017BDDC00299BFC /* Assets.xcassets */; };
 		300F80432017BDDC00299BFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F80412017BDDC00299BFC /* LaunchScreen.storyboard */; };
+		301F898A2058806100F9772B /* SyncManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301F89892058806100F9772B /* SyncManager.swift */; };
 		303F89892032596D00279B2D /* CloudDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F89882032596D00279B2D /* CloudDataManager.swift */; };
 		303F89932033851400279B2D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303F89922033851400279B2D /* CloudKit.framework */; };
 		303F899520376A0800279B2D /* CKRecordConvertableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303F899420376A0800279B2D /* CKRecordConvertableProtocol.swift */; };
@@ -19,6 +21,8 @@
 		305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */; };
 		306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BE7392028161F00936022 /* AddCabinetItemVC.swift */; };
 		306BE73C2028A5FD00936022 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306BE73B2028A5FD00936022 /* CircleView.swift */; };
+		306E1E682044743400471BA6 /* CloudQueryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E1E672044743400471BA6 /* CloudQueryOperation.swift */; };
+		306E1E6A20458DC300471BA6 /* CloudRecordFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E1E6920458DC300471BA6 /* CloudRecordFetch.swift */; };
 		30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702401201A73AE008A0B5F /* CoreDataStack.swift */; };
 		30702411201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */; };
 		30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */; };
@@ -39,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30054352205C6E6A005EBEFE /* ChangeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
 		300F80322017BDDB00299BFC /* MajorStache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MajorStache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		300F80352017BDDB00299BFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		300F803A2017BDDB00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +51,7 @@
 		300F803F2017BDDC00299BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300F80422017BDDC00299BFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		300F80442017BDDC00299BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		301F89892058806100F9772B /* SyncManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncManager.swift; sourceTree = "<group>"; };
 		303F89882032596D00279B2D /* CloudDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudDataManager.swift; sourceTree = "<group>"; };
 		303F89912033851100279B2D /* MajorStache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MajorStache.entitlements; sourceTree = "<group>"; };
 		303F89922033851400279B2D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -54,6 +60,8 @@
 		305D32DF2027BAEB003ADC03 /* NSManagedObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectExtension.swift; sourceTree = "<group>"; };
 		306BE7392028161F00936022 /* AddCabinetItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCabinetItemVC.swift; sourceTree = "<group>"; };
 		306BE73B2028A5FD00936022 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		306E1E672044743400471BA6 /* CloudQueryOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudQueryOperation.swift; sourceTree = "<group>"; };
+		306E1E6920458DC300471BA6 /* CloudRecordFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRecordFetch.swift; sourceTree = "<group>"; };
 		30702401201A73AE008A0B5F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		30702409201A7DE2008A0B5F /* TokenGenerator+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3070240A201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TokenGenerator+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -123,6 +131,10 @@
 				303F89912033851100279B2D /* MajorStache.entitlements */,
 				300F80352017BDDB00299BFC /* AppDelegate.swift */,
 				303F89882032596D00279B2D /* CloudDataManager.swift */,
+				301F89892058806100F9772B /* SyncManager.swift */,
+				30054352205C6E6A005EBEFE /* ChangeLog.swift */,
+				306E1E6920458DC300471BA6 /* CloudRecordFetch.swift */,
+				306E1E672044743400471BA6 /* CloudQueryOperation.swift */,
 				30702401201A73AE008A0B5F /* CoreDataStack.swift */,
 				30E549D92020FC20008534A2 /* CoreDataManager.swift */,
 				3070242B201BAEA4008A0B5F /* CoreDataModelEnum.swift */,
@@ -222,11 +234,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Christopher Martin";
 				TargetAttributes = {
 					300F80312017BDDB00299BFC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -275,11 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30054353205C6E6A005EBEFE /* ChangeLog.swift in Sources */,
 				303F899520376A0800279B2D /* CKRecordConvertableProtocol.swift in Sources */,
 				30702402201A73AE008A0B5F /* CoreDataStack.swift in Sources */,
 				3070242C201BAEA4008A0B5F /* CoreDataModelEnum.swift in Sources */,
 				30E549D8201C1BDB008534A2 /* CabinetCell.swift in Sources */,
 				30E549D1201C148A008534A2 /* AircraftCell.swift in Sources */,
+				306E1E6A20458DC300471BA6 /* CloudRecordFetch.swift in Sources */,
 				30E549DA2020FC20008534A2 /* CoreDataManager.swift in Sources */,
 				300F803E2017BDDC00299BFC /* Stache.xcdatamodeld in Sources */,
 				30702420201BAB4F008A0B5F /* CabinetItem+CoreDataProperties.swift in Sources */,
@@ -290,11 +305,13 @@
 				306BE73A2028161F00936022 /* AddCabinetItemVC.swift in Sources */,
 				30CDBF0A202542F20074C7CF /* CabinetItemVC.swift in Sources */,
 				303F89892032596D00279B2D /* CloudDataManager.swift in Sources */,
+				301F898A2058806100F9772B /* SyncManager.swift in Sources */,
 				30702421201BAB4F008A0B5F /* Cabinet+CoreDataClass.swift in Sources */,
 				305D32E02027BAEB003ADC03 /* NSManagedObjectExtension.swift in Sources */,
 				30CDBF0C202543250074C7CF /* CabinetItemCell.swift in Sources */,
 				3070241F201BAB4F008A0B5F /* CabinetItem+CoreDataClass.swift in Sources */,
 				300F80362017BDDB00299BFC /* AppDelegate.swift in Sources */,
+				306E1E682044743400471BA6 /* CloudQueryOperation.swift in Sources */,
 				305D32DD2027B9CF003ADC03 /* PopulatableProtocol.swift in Sources */,
 				30702412201A7DE2008A0B5F /* TokenGenerator+CoreDataProperties.swift in Sources */,
 				30702418201AC924008A0B5F /* AircraftTableVC.swift in Sources */,
@@ -339,6 +356,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -346,6 +364,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -396,6 +415,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -403,6 +423,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -440,10 +461,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
 				INFOPLIST_FILE = MajorStache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.MajorStache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -456,10 +478,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 974VC57NGN;
 				INFOPLIST_FILE = MajorStache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.martindev.MajorStache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

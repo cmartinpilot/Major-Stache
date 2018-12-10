@@ -89,6 +89,15 @@ class CoreDataManager{
         self.stack.savePrivateContext()
     }
     
+    public func fetchManagedObjectsOperation(recordIds: [String]) -> BlockOperation{
+        
+        let blockOperation = BlockOperation(block: {
+            
+        })
+        
+        return blockOperation
+    }
+    
     public func reOrder(fetchedResults: [NSManagedObject]?){
         guard fetchedResults != nil,
             let results = fetchedResults,
@@ -103,3 +112,4 @@ class CoreDataManager{
         })
     }
 }
+

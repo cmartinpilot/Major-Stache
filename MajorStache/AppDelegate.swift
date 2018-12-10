@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CoreDataConforming{
         return manager
     }()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         guard let navController = self.window?.rootViewController as? UINavigationController,
-            var initialController = navController.topViewController as? CoreDataConforming else{return true}
+            var initialController = navController.topViewController as? CoreDataConforming else{return false}
         
         initialController.dataManager = self.dataManager
         

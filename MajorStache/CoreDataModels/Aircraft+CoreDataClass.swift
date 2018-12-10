@@ -28,7 +28,7 @@ extension Aircraft: Populatable{
 extension Aircraft: CKRecordConvertable{
     
     public func convertToCKRecord() -> CKRecord? {
-        guard let recordID = self.recordID as? CKRecordID,
+        guard let recordID = self.recordID as? CKRecord.ID,
             let typeString = self.entity.name else {return nil}
         
         let record = CKRecord(recordType: typeString, recordID: recordID)

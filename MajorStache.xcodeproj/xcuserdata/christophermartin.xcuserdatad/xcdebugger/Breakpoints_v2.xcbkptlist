@@ -6,11 +6,277 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MajorStache/CoreDataStack.swift"
+            timestampString = "566052911.636705"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "persistantStoreCoordinator"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.init(modelName: Swift.String) -&gt; MajorStache.CoreDataStack"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.745744"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(persistantStoreCoordinator in _27AF70B647B209BB7E753E03E53931BA).getter : Swift.Optional&lt;__C.NSPersistentStoreCoordinator&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.748163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(persistantStoreCoordinator in _27AF70B647B209BB7E753E03E53931BA).setter : Swift.Optional&lt;__C.NSPersistentStoreCoordinator&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.75044"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;__C.NSPersistentStoreCoordinator&gt; in MajorStache.CoreDataStack.(persistantStoreCoordinator in _27AF70B647B209BB7E753E03E53931BA).getter : Swift.Optional&lt;__C.NSPersistentStoreCoordinator&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.752241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MajorStache/CoreDataStack.swift"
+            timestampString = "566052911.6372451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "persistantStoreCoordinator"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MajorStache/CoreDataStack.swift"
+            timestampString = "566052911.6374871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "managedObjectModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.init(modelName: Swift.String) -&gt; MajorStache.CoreDataStack"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.788063"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(managedObjectModel in _27AF70B647B209BB7E753E03E53931BA).getter : Swift.Optional&lt;__C.NSManagedObjectModel&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.790028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(managedObjectModel in _27AF70B647B209BB7E753E03E53931BA).setter : Swift.Optional&lt;__C.NSManagedObjectModel&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.7919821"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;__C.NSManagedObjectModel&gt; in MajorStache.CoreDataStack.(managedObjectModel in _27AF70B647B209BB7E753E03E53931BA).getter : Swift.Optional&lt;__C.NSManagedObjectModel&gt;"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.79423"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MajorStache/CoreDataStack.swift"
+            timestampString = "566052911.637711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "persistentStoreURL"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.init(modelName: Swift.String) -&gt; MajorStache.CoreDataStack"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.815842"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(persistentStoreURL in _27AF70B647B209BB7E753E03E53931BA).getter : Foundation.URL"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.817719"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MajorStache.CoreDataStack.(persistentStoreURL in _27AF70B647B209BB7E753E03E53931BA).setter : Foundation.URL"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.819634"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Foundation.URL in MajorStache.CoreDataStack.(persistentStoreURL in _27AF70B647B209BB7E753E03E53931BA).getter : Foundation.URL"
+                  moduleName = "MajorStache"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christophermartin/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Builds/MajorStache/MajorStache/CoreDataStack.swift"
+                  timestampString = "566052911.821454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MajorStache/CoreDataStack.swift"
+            timestampString = "566052911.637926"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "persistentStoreURL"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

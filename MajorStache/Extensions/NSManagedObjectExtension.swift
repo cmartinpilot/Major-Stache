@@ -12,7 +12,7 @@ import CloudKit
 
 extension NSManagedObject{
     
-    public func createRecordID() -> CKRecordID{
+    public func createRecordID() -> CKRecord.ID{
         
         let typeString:String? = self.entity.name ?? "NilObject"
         let uuid = UUID().uuidString
@@ -20,7 +20,7 @@ extension NSManagedObject{
         
         let combinedString = typeString! + seperator + uuid
         print("Created recordID: \(combinedString) for type \(typeString!))")
-        let recordID = CKRecordID(recordName: combinedString)
+        let recordID = CKRecord.ID(recordName: combinedString)
         return recordID
     }
 }

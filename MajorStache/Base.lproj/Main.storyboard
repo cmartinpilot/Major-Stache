@@ -19,13 +19,13 @@
         <!--Aircraft TableVC-->
         <scene sceneID="gbq-Hy-hal">
             <objects>
-                <tableViewController id="FWv-SK-ZzI" customClass="AircraftTableVC" customModule="Stash" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="FWv-SK-ZzI" customClass="AircraftTableVC" customModule="MajorStache" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="heY-58-HWr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="aircraftCellReuseID" rowHeight="100" id="bv3-gV-b44" customClass="AircraftCell" customModule="Stash" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="aircraftCellReuseID" rowHeight="100" id="bv3-gV-b44" customClass="AircraftCell" customModule="MajorStache" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bv3-gV-b44" id="0jW-9E-kDT">
@@ -73,7 +73,7 @@
         <!--CabinetVC-->
         <scene sceneID="ffg-Dr-gi9">
             <objects>
-                <viewController id="0dj-nQ-SmQ" customClass="CabinetVC" customModule="Stash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0dj-nQ-SmQ" customClass="CabinetVC" customModule="MajorStache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CXN-ew-JVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cabinetCellReuseID" rowHeight="120" id="dH6-on-b6E" customClass="CabinetCell" customModule="Stash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cabinetCellReuseID" rowHeight="120" id="dH6-on-b6E" customClass="CabinetCell" customModule="MajorStache" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dH6-on-b6E" id="opB-lQ-4RR">
@@ -175,7 +175,7 @@
         <!--Cabinet ItemVC-->
         <scene sceneID="Uuz-Zx-hWM">
             <objects>
-                <viewController storyboardIdentifier="cabinetItemStoryboardID" id="j6k-Zs-50J" customClass="CabinetItemVC" customModule="Stash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cabinetItemStoryboardID" id="j6k-Zs-50J" customClass="CabinetItemVC" customModule="MajorStache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UkF-T4-6RQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,10 +190,10 @@
                                     <constraint firstAttribute="height" constant="164" id="iGb-5N-Q88"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cabinetItemCellReuseID" rowHeight="41" id="cGH-D0-KdV" customClass="CabinetItemCell" customModule="Stash" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cabinetItemCellReuseID" rowHeight="41" id="cGH-D0-KdV" customClass="CabinetItemCell" customModule="MajorStache" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cGH-D0-KdV" id="oo4-V8-AXX" customClass="CabinetItemCell" customModule="Stash" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cGH-D0-KdV" id="oo4-V8-AXX" customClass="CabinetItemCell" customModule="MajorStache" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="40.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -204,7 +204,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-p9-YeY" customClass="CircleView" customModule="Stash" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-p9-YeY" customClass="CircleView" customModule="MajorStache" customModuleProvider="target">
                                                     <rect key="frame" x="320" y="0.0" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -255,7 +255,7 @@
         <!--Add Cabinet ItemVC-->
         <scene sceneID="EJW-qa-SrU">
             <objects>
-                <viewController id="Is8-FH-tlJ" customClass="AddCabinetItemVC" customModule="Stash" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Is8-FH-tlJ" customClass="AddCabinetItemVC" customModule="MajorStache" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B3j-Au-FBY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -289,7 +289,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-kJ-GxM" customClass="CircleView" customModule="Stash" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-kJ-GxM" customClass="CircleView" customModule="MajorStache" customModuleProvider="target">
                                                 <rect key="frame" x="39" y="32" width="70" height="70"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>

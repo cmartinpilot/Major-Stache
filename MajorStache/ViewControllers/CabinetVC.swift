@@ -97,9 +97,12 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
         self.present(self.imagePicker, animated: true) {}
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         
-        if let image = info[UIImagePickerControllerOriginalImage]{
+        if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)]{
 
             if let cell = self.cellOfTappedImageView as? CabinetCell{
                 
@@ -107,7 +110,7 @@ class CabinetVC: UIViewController, CoreDataConforming, UIImagePickerControllerDe
                 print ("\(String(describing: self.cabinetTableView.indexPath(for: cell)))")
                 if let indexPath = self.cabinetTableView.indexPath(for: cell){
                     let cabinet = self.fetchedResultsController?.object(at: indexPath)
-                    cabinet?.image = UIImagePNGRepresentation(image as! UIImage)! as NSData
+                    cabinet?.image = (image as! UIImage).pngData()! as NSData
                 }
             }
         }
@@ -176,7 +179,7 @@ extension CabinetVC: UITableViewDelegate, UITableViewDataSource {
         cell.cabinetImageView.addGestureRecognizer(recognizer)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             guard let cabinet = self.fetchedResultsController?.object(at: indexPath) else {return}
             self.dataManager?.delete(object: cabinet)
@@ -260,8 +263,8 @@ extension CabinetVC{
     
     private func registerForKeyboardNotifications(){
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWasShown(notification: NSNotification){
@@ -271,11 +274,11 @@ extension CabinetVC{
         
         guard self.currentTextField != self.tailnumber,
             let info = notification.userInfo,
-            let keyboardHeight = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height,
+            let keyboardHeight = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height,
             let cell = self.currentTextField?.superview?.superview as? CabinetCell,
             let path = self.cabinetTableView.indexPath(for: cell) else {return}
         
-        let contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardHeight + cellPadding, 0.0)
+        let contentInsets = UIEdgeInsets.init(top: 0.0, left: 0.0, bottom: keyboardHeight + cellPadding, right: 0.0)
         self.cabinetTableView.contentInset = contentInsets
         self.cabinetTableView.scrollIndicatorInsets = contentInsets
         
@@ -291,4 +294,14 @@ extension CabinetVC{
             self.cabinetTableView.scrollIndicatorInsets = UIEdgeInsets.zero
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
 }

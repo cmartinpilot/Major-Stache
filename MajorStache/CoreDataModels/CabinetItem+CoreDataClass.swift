@@ -31,7 +31,7 @@ extension CabinetItem: Populatable{
 extension CabinetItem: CKRecordConvertable{
     
     public func convertToCKRecord() -> CKRecord? {
-        guard let recordID = self.recordID as? CKRecordID,
+        guard let recordID = self.recordID as? CKRecord.ID,
             let typeString = self.entity.name else {return nil}
         
         let isAvailableString = self.isAvailable.description as NSString
@@ -50,8 +50,8 @@ extension CabinetItem: CKRecordConvertable{
         
         if let cabinet = self.cabinet{
             
-            if let recordID = cabinet.recordID as? CKRecordID{
-                let cabinetReference = CKReference(recordID: recordID, action: .deleteSelf)
+            if let recordID = cabinet.recordID as? CKRecord.ID{
+                let cabinetReference = CKRecord.Reference(recordID: recordID, action: .deleteSelf)
                 record.setObject(cabinetReference, forKey: "cabinet")
             }
         }
